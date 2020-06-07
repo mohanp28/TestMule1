@@ -16,6 +16,7 @@
 
 		<app.runtime>4.2.2-hf2</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		<mule.home>E:\SoftInst\mule</mule.home>
 	</properties>
 
 	<build>
@@ -31,6 +32,10 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<standaloneDeployment>
+						<muleVersion>${app.runtime}</muleVersion>
+						<muleHome>${mule.home}</muleHome> 
+					</standaloneDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
